@@ -11,6 +11,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
+data "aws_vpc" "tf-data-vpc" {
+  id = "vpc-0e1e9a3233f8de119"
+}
+/*
 resource "aws_vpc" "main" {
   cidr_block = "10.5.0.0/16"
 
@@ -35,3 +39,5 @@ resource "aws_instance" "web" {
     Name = var.ec2_name
   }
 }
+*/
+
