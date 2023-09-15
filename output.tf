@@ -1,11 +1,9 @@
+output "first_instance_ip" {
+  value = aws_instance.web[0].public_ip
+}
+output "first_instance_ami" {
+  value = aws_instance.web[0].ami
+}
 output "instance_ip" {
-  value = aws_instance.web.id
-}
-
-output "instance_ami" {
-  value = aws_instance.web.ami
-}
-
-output "vpc_id" {
-  value = aws_vpc.main.id
+  value = aws_instance.web[*].public_ip
 }
