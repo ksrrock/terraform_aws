@@ -6,6 +6,6 @@ output "instance_ami" {
   value = aws_instance.web.ami
 }
 
-output "vpc_id" {
-  value = aws_vpc.main.id
-}
+#output "vpc_id" {
+#  value = aws_vpc.main.id
+#}
